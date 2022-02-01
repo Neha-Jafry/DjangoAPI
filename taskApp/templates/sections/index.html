@@ -1,0 +1,17 @@
+<section>
+    <div>
+        <h1>
+            {{ sec.SectionTitle }}
+            <button type="button"> Add Subsection</button>
+            <button type="button"> Edit</button>
+            <button type="button"> Delete</button>
+        </h1>
+        
+    </div>
+    
+    <p> {{ sec.Content }} </p>
+
+    {% if sec.isParent %}
+        {% include 'sections/index.html' with sec=sec.subsecs.all %}
+    {% endif %}
+</section>

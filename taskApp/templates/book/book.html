@@ -1,0 +1,12 @@
+
+
+{% if book %}
+    {% for section in book %}
+        {% if section.Parent == null %}
+            {% include 'sections/index.html' with sec=section %}
+        {% endif %}
+    {% endfor %}
+{% else %}
+    <p>No book are available.</p>
+{% endif %}
+

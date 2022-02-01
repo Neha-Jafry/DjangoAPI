@@ -1,0 +1,19 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+    function add() {
+        alert('here');
+        $.post('section/', function (data) {
+            alert(data);
+        });
+    }
+</script>
+
+<form">
+
+    <h3>Title</h3>
+    <input type="text">
+    <h4>Content</h4>
+    <textarea name="title" id="" cols="30" rows="10"> </textarea>
+
+    <button type="submit" onsubmit="add();"> Add </button>
+</form>
